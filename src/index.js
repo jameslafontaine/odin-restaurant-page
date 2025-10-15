@@ -3,6 +3,11 @@ import { renderHomeContent } from "./home.js";
 import { renderMenuContent } from "./menu.js";
 import { renderContactContent } from "./contact.js";
 
+
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Looks like we are in development mode!');
+}
+
 const contentDiv = document.querySelector("#content");
 
 // Map button selectors to their corresponding render functions for easy extension
